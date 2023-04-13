@@ -10,7 +10,7 @@ c3 = Category.create(title: 'SQL')
 
 t1 = Test.create(title: 'Lesson 1', level: 0, category_id: c1.id)
 t2 = Test.create(title: 'Lesson 2', level: 1, category_id: c1.id)
-Test.create(title: 'Lesson 3', level: 1, category_id: c2.id)
+t3 = Test.create(title: 'Lesson 3', level: 1, category_id: c2.id)
 Test.create(title: 'Lesson 5', level: 2, category_id: c3.id)
 
 q1 = Question.create(body: 'q1', test_id: t1.id)
@@ -21,4 +21,7 @@ Answer.create(body: 'Correct', correct: true, question_id: q1.id)
 Answer.create(body: 'Correct', correct: true, question_id: q2.id)
 Answer.create(body: 'Uncorrect', question_id: q2.id)
 
-User.create(name: 'User')
+user1 = User.create(name: 'User')
+
+t1.users << user1
+t3.users << user1
