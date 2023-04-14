@@ -23,5 +23,5 @@ Answer.create(body: 'Uncorrect', question_id: q2.id)
 
 user1 = User.create(name: 'User')
 
-t1.users << user1
-t3.users << user1
+UserTest.create(user: user1, test: t1)
+UserTest.create(user: user1, test: t3)
