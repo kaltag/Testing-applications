@@ -12,4 +12,9 @@ class Test < ApplicationRecord
   scope :hard_tests, -> { where(level: 5..Float::INFINITY) }
 
   scope :get_tests_name, ->(category_name) { Test.joins(:category).where(categories: { title: category_name }).order(title: :DESC).pluck('tests.title') }
+
+  validates :title, presence: true
+  validates :level, presence: true
+  validates :title, uniqueness: { scope: :level }
+  validates_numericality_of :level, greater_than_or_equal_to: 0
 end
