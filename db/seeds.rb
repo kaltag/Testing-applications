@@ -14,9 +14,10 @@ user2 = User.create(name: 'User2')
 
 t1 = Test.create(title: 'Lesson 1', level: 0, category_id: c1.id, user_id: user1.id)
 t2 = Test.create(title: 'Lesson 2', level: 1, category_id: c1.id, user_id: user1.id)
-t3 = Test.create(title: 'Lesson 3', level: 1, category_id: c2.id, user_id: user1.id)
-Test.create(title: 'Lesson 4', level: 1, category_id: c2.id, user_id: user2.id)
-Test.create(title: 'Lesson 5', level: 1, category_id: c2.id, user_id: user2.id)
+t3 = Test.create(title: 'Lesson 3', level: 2, category_id: c2.id, user_id: user1.id)
+Test.create(title: 'Lesson 4', level: 4, category_id: c2.id, user_id: user2.id)
+Test.create(title: 'Lesson 5', level: 5, category_id: c3.id, user_id: user2.id)
+Test.create(title: 'Lesson 6', level: 10, category_id: c3.id, user_id: user2.id)
 
 UserTest.create(user: user1, test: t1)
 UserTest.create(user: user2, test: t3)
