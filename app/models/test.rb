@@ -3,9 +3,18 @@ class Test < ApplicationRecord
   has_many :questions
   has_many :user_tests
   has_many :users, through: :user_tests
-  belongs_to :author, class_name: "User", foreign_key: "user_id"
+  belongs_to :author, class_name: 'User', foreign_key: 'user_id'
 
-  def self.get_tests_name(category_name)
-    Test.joins('join categories on categories.id = tests.category_id').where(categories: { title: category_name }).order(title: :DESC).pluck('tests.title')
-  end
+  scope :correct_answer, -> { where(correct: true) }
+
+  scope :easy_tests, -> { where(level: 0..1) }
+  scope :medium_tests, -> { where(level: 2..4) }
+  scope :hard_tests, -> { where(level: 5..Float::INFINITY) }
+
+  scope :get_tests_name, ->(category_name) { Test.joins(:category).where(categories: { title: category_name }).order(title: :DESC).pluck('tests.title') }
+
+  validates :title, presence: true
+  validates :level, presence: true
+  validates :title, uniqueness: { scope: :level }
+  validates_numericality_of :level, greater_than_or_equal_to: 0
 end
