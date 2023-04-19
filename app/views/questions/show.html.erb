@@ -1,0 +1,4 @@
+<p id="notice"><%= notice %></p>
+<%= @question.body %>
+<%= link_to 'Back', test_questions_path %>
+<%= link_to 'Delete', test_question_path, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить вопрос?' } %>
