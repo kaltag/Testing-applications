@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: %i[show destroy]
-  before_action :set_test, only: %i[index new]
+  before_action :set_test, only: %i[index new create]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -18,15 +18,13 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
+    @question = Question.new(body: question_params[:body], test_id: @test.id)
 
     respond_to do |format|
       if @question.save
         format.html { redirect_to test_questions_path, notice: 'Question was successfully created.' }
-        format.json { render :show, status: :created, location: @question }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @question.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -37,7 +35,6 @@ class QuestionsController < ApplicationController
 
     # respond_to do |format|
     #   format.html { redirect_to test_questions_path, notice: "Question was successfully destroyed." }
-    #   format.json { head :no_content }
     # end
   end
 
@@ -52,7 +49,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:body, :test_id)
+    params.require(:question).permit(:body)
   end
 
   def rescue_with_question_not_found
