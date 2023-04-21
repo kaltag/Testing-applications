@@ -18,14 +18,12 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(body: question_params[:body], test_id: @test.id)
+    @question = @test.questions.new(question_params)
 
-    respond_to do |format|
-      if @question.save
-        format.html { redirect_to test_questions_path, notice: 'Question was successfully created.' }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    if @question.save
+      redirect_to test_questions_path, notice: 'Question was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -33,9 +31,7 @@ class QuestionsController < ApplicationController
     @question.destroy
     render plain: 'Question has been deleted successfully!'
 
-    # respond_to do |format|
-    #   format.html { redirect_to test_questions_path, notice: "Question was successfully destroyed." }
-    # end
+    # redirect_to test_questions_path, notice: "Question was successfully destroyed."
   end
 
   private
