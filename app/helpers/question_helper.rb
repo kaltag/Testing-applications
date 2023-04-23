@@ -1,6 +1,9 @@
 module QuestionHelper
-  TITLES = { new: 'Create new', edit: 'Edit', show: nil }.freeze
-  def question_header(test)
-    "#{TITLES[action_name.to_sym]} #{test.title} question"
+  def question_header(object, test)
+    if object.new_record?
+      "Create new #{test.title} question"
+    else
+      "Edit #{test.title} question"
+    end
   end
 end
