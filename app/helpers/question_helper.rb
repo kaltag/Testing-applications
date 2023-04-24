@@ -1,9 +1,9 @@
 module QuestionHelper
-  def question_header(object, test)
+  def question_header(object)
     if object.new_record?
-      "Create new #{test.title} question"
+      "Create new #{object.test.title} question"
     else
-      "Edit #{test.title} question"
+      "Edit #{object.test.title} question"
     end
   end
 end
