@@ -1,0 +1,38 @@
+<%= form_with(model: test) do |form| %>
+  <% if test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(test.errors.count, 'error') %> prohibited this test from being saved:</h2>
+
+      <ul>
+        <% test.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label 'Введите название теста' %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label 'Введите уровень сложности' %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div>
+    <%= form.label 'Выберите категорию' %>
+    <%= form.collection_select :category_id, Category.order(:title), :id, :title %>
+  </div>
+
+<%# TODO: пока нет @current_user, то пользователь выбирается руками %>
+  <div>
+    <%= form.label 'Выберите пользователя' %>
+    <%= form.collection_select :user_id, User.order(:name), :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
