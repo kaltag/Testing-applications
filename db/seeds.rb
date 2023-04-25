@@ -1,6 +1,6 @@
 Answer.destroy_all
 Question.destroy_all
-UserTest.destroy_all
+TestPassage.destroy_all
 Test.destroy_all
 Category.destroy_all
 User.destroy_all
@@ -19,9 +19,9 @@ Test.create(title: 'Lesson 4', level: rand(1..10), category_id: c2.id, user_id: 
 Test.create(title: 'Lesson 5', level: rand(1..10), category_id: c3.id, user_id: user2.id)
 Test.create(title: 'Lesson 6', level: rand(1..10), category_id: c3.id, user_id: user2.id)
 
-UserTest.create(user: user1, test: t1)
-UserTest.create(user: user2, test: t3)
-UserTest.create(user: user1, test: t2)
+TestPassage.create(user: user1, test: t1)
+TestPassage.create(user: user2, test: t3)
+TestPassage.create(user: user1, test: t2)
 
 q1 = Question.create(body: 'q1', test_id: t1.id)
 q2 = Question.create(body: 'q2', test_id: t2.id)
