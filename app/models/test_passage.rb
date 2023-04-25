@@ -31,11 +31,11 @@ class TestPassage < ApplicationRecord
   private
 
   def before_validation_set_question
-    if current_question.present?
-      self.current_question = next_question
-    elsif test.present?
-      self.current_question = test.questions.first
-    end
+    self.current_question = if current_question.present?
+                              next_question
+                            else
+                              test.questions.first
+                            end
   end
 
   def next_question
