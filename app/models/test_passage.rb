@@ -5,13 +5,27 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question, on: %i[create update]
 
+  SUCCESPOINT = 85
+
   def completed?
     current_question.nil?
+  end
+
+  def succes?
+    percent >= SUCCESPOINT
+  end
+
+  def percent
+    (correct_question.to_f / test.questions.count) * 100
   end
 
   def accept!(answer_ids)
     self.correct_question += 1 if correct_answer?(answer_ids)
     save!
+  end
+
+  def current_question_number
+    current_question_index + 1
   end
 
   private
@@ -29,10 +43,14 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    correct_answers.ids.sort == answer_ids&.map(&:to_i)&.sort
   end
 
   def correct_answers
     current_question.answers.correct_answer
+  end
+
+  def current_question_index
+    test.questions.index(current_question)
   end
 end
