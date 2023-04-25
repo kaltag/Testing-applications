@@ -1,4 +1,4 @@
-<h1><%= question_header(question, test) %></h1>
+<h1><%= question_header(question) %></h1>
 <%= form_with model: [@test, question] do |form| %>
   <% if question.errors.any? %>
     <div id="error_explanation">
