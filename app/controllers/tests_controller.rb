@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
   before_action :set_test, only: %i[show edit update destroy start]
-
+  before_action :autheticate_user!
   def index
     @tests = Test.all
   end
@@ -37,11 +37,9 @@ class TestsController < ApplicationController
     redirect_to tests_url, notice: 'Test was successfully destroyed.'
   end
 
-  # TODO: заменить на current_user
   def start
-    @user = User.first
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)
+    @current_user.tests.push(@test)
+    redirect_to @current_user.test_passage(@test)
   end
 
   private
