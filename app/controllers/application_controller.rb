@@ -5,9 +5,10 @@ class ApplicationController < ActionController::Base
   private
 
   def autheticate_user!
-    redirect_to login_path, alert: 'Verify email or password' unless current_user
-
-    cookies[:email] = current_user.email
+    unless current_user
+      #  cookies[:email] = current_user.email
+      redirect_to login_path, alert: 'Verify email or password' unless current_user
+    end
   end
 
   def current_user
