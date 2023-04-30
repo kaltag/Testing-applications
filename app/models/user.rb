@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: 'Test'
 
-  VALID_EMAIL= /\A\w+@\w+\.\w+\z/
+  VALID_EMAIL = /\A\w+@\w+\.\w+\z/
 
   validates :email, presence: true,
                     format: VALID_EMAIL,

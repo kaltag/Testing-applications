@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :autheticate_user!
+
   def new
     @user = User.new
   end

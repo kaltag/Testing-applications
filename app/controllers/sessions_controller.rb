@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :autheticate_user!
+
   def new
   end
 
@@ -15,7 +17,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    session.delete :user_id
+    cookies.delete :intended_url
     redirect_to login_path, notice: 'Log out successful!'
   end
 end
