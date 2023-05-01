@@ -9,7 +9,9 @@ module ApplicationHelper
     link_to repo, "https://github.com/#{author}/#{repo}", target: '_blank'
   end
 
-  def flash_message(type)
-    content_tag :p, flash[type], class: "flash #{type}" if flash[type]
+  def flash_message
+    flash.each do |type, msg|
+      content_tag :p, msg, class: "flash #{type}"
+    end
   end
 end
