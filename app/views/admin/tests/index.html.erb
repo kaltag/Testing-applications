@@ -8,8 +8,8 @@
       <th>Title</th>
       <th>Level</th>
       <th>Category</th>
-      <th>Questions</th>
-      <th>Actions</th>
+       <th>Questions</th>
+      <th colspan='4'> Actions </th>
     </tr>
   </thead>
 
@@ -21,12 +21,14 @@
         <td><%= test.level %></td>
         <td><%= test.category.title %></td>
         <td><%= test.questions.count %></td>
-        <% if test.questions.present? %>
-          <td><%= button_to 'Start', start_test_path(test) %> </td>
-        <% end %>
+        <td><%= link_to 'Show', admin_test_path(test) %></td>
+        <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
+        <td><%= link_to 'Destroy', admin_test_path(test), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
+<%= link_to 'New Test', new_admin_test_path %>

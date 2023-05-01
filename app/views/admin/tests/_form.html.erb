@@ -1,4 +1,4 @@
-<%= form_with(model: test) do |form| %>
+<%= form_with model: [:admin, @test]  do |form| %>
   <%= render 'shared/errors', resource: @test %>
 
   <div>
@@ -14,12 +14,6 @@
   <div>
     <%= form.label 'Выберите категорию' %>
     <%= form.collection_select :category_id, Category.order(:title), :id, :title %>
-  </div>
-
-<%# TODO: пока нет @current_user, то пользователь выбирается руками %>
-  <div>
-    <%= form.label 'Выберите пользователя' %>
-    <%= form.collection_select :user_id, User.order(:name), :id, :name %>
   </div>
 
   <div class="actions">
