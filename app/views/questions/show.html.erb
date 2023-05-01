@@ -1,5 +1,0 @@
-<p id="notice"><%= notice %></p>
-<%= @question.body %>
-<%= link_to 'Back', test_path(id: @question.test_id) %>
-<%= link_to 'Delete', question_path, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить вопрос?' } %>
-<%= render 'answers/list', question: @question %>
