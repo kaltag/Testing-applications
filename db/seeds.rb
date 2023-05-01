@@ -9,8 +9,8 @@ c1 = Category.create(title: 'Ruby')
 c2 = Category.create(title: 'Rails')
 c3 = Category.create(title: 'SQL')
 
-user1 = User.create(name: Faker::Name.first_name)
-user2 = User.create(name: Faker::Name.first_name)
+user1 = User.create(email: 'user@test.com', password_digest: 123)
+user2 = User.create(email: 'user2@test.com', password_digest: 123)
 
 t1 = Test.create(title: 'Lesson 1', level: rand(1..10), category_id: c1.id, user_id: user1.id)
 t2 = Test.create(title: 'Lesson 2', level: rand(1..10), category_id: c1.id, user_id: user1.id)
