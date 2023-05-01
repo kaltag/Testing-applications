@@ -1,4 +1,9 @@
 class ApplicationController < ActionController::Base
-  # TODO: Включить позже
-  # before_action :authenticate_user!
+  def after_sign_in_path_for(current_user)
+    if current_user.type == 'Admin'
+      admin_tests_path
+    else
+      root_path
+    end
+  end
 end
