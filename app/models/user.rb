@@ -8,9 +8,9 @@ class User < ApplicationRecord
          :trackable,
          :validatable
 
-  has_many :test_passages
-  has_many :tests, through: :test_passages
-  has_many :created_tests, class_name: 'Test'
+  has_many :test_passages, dependent: :destroy
+  has_many :tests, through: :test_passages, dependent: :destroy
+  has_many :created_tests, class_name: 'Test', dependent: :destroy
 
   def get_tests_with_level(level)
     tests.where(level:)
