@@ -1,5 +1,4 @@
 module ApplicationHelper
-  include BetterHtml::Helpers
 
   def current_year
     Time.zone.now.year
