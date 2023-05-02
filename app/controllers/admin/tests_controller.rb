@@ -1,6 +1,6 @@
 class Admin::TestsController < Admin::BaseController
-  before_action :authenticate_user!
   before_action :set_test, only: %i[show edit update destroy]
+
   def index
     @tests = Test.all
   end
