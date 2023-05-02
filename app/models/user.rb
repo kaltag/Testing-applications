@@ -1,15 +1,16 @@
 class User < ApplicationRecord
-  has_many :test_passages
-  has_many :tests, through: :test_passages
-  has_many :created_tests, class_name: 'Test'
+  # :lockable, :timeoutable, and :omniauthable
+  devise :confirmable,
+         :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :trackable,
+         :validatable
 
-  VALID_EMAIL = /\A\w+@\w+\.\w+\z/
-
-  validates :email, presence: true,
-                    format: VALID_EMAIL,
-                    uniqueness: { case_sensitive: false }
-
-  has_secure_password
+  has_many :test_passages, dependent: :destroy
+  has_many :tests, through: :test_passages, dependent: :destroy
+  has_many :created_tests, class_name: 'Test', dependent: :destroy
 
   def get_tests_with_level(level)
     tests.where(level:)
@@ -17,5 +18,9 @@ class User < ApplicationRecord
 
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
+  end
+
+  def admin?
+    is_a?(Admin)
   end
 end

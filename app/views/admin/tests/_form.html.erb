@@ -1,0 +1,22 @@
+<%= form_with model: [:admin, @test]  do |form| %>
+  <%= render 'shared/errors', resource: @test %>
+
+  <div>
+    <%= form.label 'Введите название теста' %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label 'Введите уровень сложности' %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div>
+    <%= form.label 'Выберите категорию' %>
+    <%= form.collection_select :category_id, Category.order(:title), :id, :title %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
