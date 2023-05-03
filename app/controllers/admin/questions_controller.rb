@@ -18,7 +18,7 @@ class Admin::QuestionsController < Admin::BaseController
     @question = @test.questions.new(question_params)
 
     if @question.save
-      redirect_to admin_question_path(@question), notice: 'Question was successfully created.'
+      redirect_to admin_question_path(@question), notice: t('.question_created')
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,7 +26,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def update
     if @question.update(question_params)
-      redirect_to admin_question_path(@question), notice: 'Question was successfully updated.'
+      redirect_to admin_question_path(@question), notice: t('.question_updated')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -34,7 +34,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def destroy
     @question.destroy
-    redirect_to admin_test_path(id: @question.test_id), notice: 'Question was successfully destroyed.'
+    redirect_to admin_test_path(id: @question.test_id), notice: t('.question_deleted')
   end
 
   private
@@ -52,6 +52,7 @@ class Admin::QuestionsController < Admin::BaseController
   end
 
   def rescue_with_question_not_found
+    # render file: 'public/404', layout: false, status: :not_found
     render plain: 'Вопрос не найден'
   end
 end

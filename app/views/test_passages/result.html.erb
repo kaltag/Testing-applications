@@ -1,13 +1,12 @@
-  TEST COMPLETED
-
+<h1><%= t('.header') %><u><%= @test_passage.test.title %></u></h1>
 <% if @test_passage.succes? %>
-  <p style="color:green;"> <%= @test_passage.percent %>%</p>
-  <p style="color:green;"> TEST SUCCESSFUL</p>
+  <p style="color:green;"> <%= t('.test_result') %> <%= @test_passage.percent.round %>%</p>
+  <p style="color:green;"> <%= t('.success') %></p>
 <% else %>
-  <p style="color:red;"> <%= @test_passage.percent %>%</p>
-  <p style="color:red;"> TEST FALL</p>
+  <p style="color:red;"> <%= t('.test_result') %> <%= @test_passage.percent.round %>%</p>
+  <p style="color:red;"> <%= t('.failure') %></p>
 <% end %>
 
-<p> Решено вопросов:<%= @test_passage.correct_question %> </p>
-<p> Всего вопросов:<%= @test_passage.test.questions.count %> </p>
-<%= link_to 'Back', tests_path %>
+<p> <%= t('.correct') %> <%= @test_passage.correct_question %> </p>
+<p> <%= t('.all_questions') %> <%= @test_passage.test.questions.count %> </p>
+<%= link_to t('.tests_button'), tests_path %>

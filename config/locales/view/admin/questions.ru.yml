@@ -1,0 +1,35 @@
+ru:
+  admin:
+    questions:
+      create:
+        question_created: 'Вопрос был успешно создан!'
+      update:
+        question_updated: 'Вопрос был успешно обновлен!'
+      destroy:
+        question_deleted: 'Вопрос был успешно удален!'
+      list:
+        questions_title: 'Вопросы:'
+        question_label: 'Вопрос'
+        actions: 'Действия'
+        show_question_button: 'Показать'
+        edit_question_button: 'Изменить'
+        delete_question_button: 'Удалить'
+        are_you_sure: 'Вы уверены?'
+        new_question_button: 'Новый Вопрос'
+      show:
+        header: 'Вопрос из Теста: %{title}'
+        question_label: 'Вопрос:'
+        edit_question_button: 'Изменить Вопрос'
+        delete_question_button: 'Удалить'
+        are_you_sure: 'Вы уверены?'
+        back_to_qstn_test_button: 'Назад'
+        not_authorized: 'Вы не авторизированы для просмотра этой страницы.'
+      new:
+        header: 'Создать Новый Вопрос для Теста: %{test_title}'
+        back_tests_button: 'Назад'
+      edit:
+        header: 'Редактировать Вопрос из Теста: %{test_title}'
+        delete_question_button: 'Удалить'
+        are_you_sure: 'Вы уверены?'
+        back_to_test_qstn: 'Назад'
+        show_question_button: 'Показать'

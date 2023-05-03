@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
-<%= @question.body %>
-<%= link_to 'Back', admin_test_path(id: @question.test_id) %> |
-<%= link_to 'Edit', edit_admin_question_path(@question) %> |
-<%= link_to 'Delete', admin_question_path, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить вопрос?' } %>
+<p><%= t('.header', title: @question.test.title) %></p>
+<p> <%= t('.question_label') %> <%= @question.body %></p>
+<%= link_to t('.back_to_qstn_test_button'), admin_test_path(id: @question.test_id) %> |
+<%= link_to t('.edit_question_button'), edit_admin_question_path(@question) %> |
+<%= link_to t('.delete_question_button'), admin_question_path, method: :delete, data: { confirm: t('.are_you_sure') } %>
 
 <%= render 'admin/answers/list', question: @question %>

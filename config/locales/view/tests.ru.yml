@@ -1,0 +1,10 @@
+ru:
+  tests:
+    index:
+      header: 'Доступные тесты'
+      title: 'Название'
+      level: 'Уровень'
+      category: 'Категория'
+      questions: 'Вопросы'
+      actions: 'Действия'
+      start_button: 'Старт'

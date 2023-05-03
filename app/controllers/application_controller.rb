@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
 
@@ -8,6 +9,10 @@ class ApplicationController < ActionController::Base
     else
       root_path
     end
+  end
+
+  def default_url_options
+    { locale: I18n.locale }
   end
 
   protected
@@ -20,5 +25,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) do |user_params|
       user_params.permit(:first_name, :last_name, :email, :password)
     end
+  end
+
+  private
+
+  def set_locale
+    I18n.locale = I18n.locale_available?(params[:locale]) ? params[:locale] : I18n.default_locale
+    Rails.application.routes.default_url_options[:locale] = I18n.locale
   end
 end

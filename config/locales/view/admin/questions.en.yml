@@ -1,0 +1,35 @@
+en:
+  admin:
+    questions:
+      create:
+        question_created: 'Question was successfully created!'
+      update:
+        question_updated: 'Question was successfully updated!'
+      destroy:
+        question_deleted: 'Question was successfully deleted!'
+      list:
+        questions_title: 'Questions:'
+        question_label: 'Question'
+        actions: 'Actions'
+        show_question_button: 'Show'
+        edit_question_button: 'Edit'
+        delete_question_button: 'Delete'
+        are_you_sure: 'Are you sure?'
+        new_question_button: 'New Question'
+      show:
+        header: 'The Question from the Test: %{title}'
+        question_label: 'Question:'
+        edit_question_button: 'Edit Question'
+        delete_question_button: 'Delete'
+        are_you_sure: 'Are you sure?'
+        back_to_qstn_test_button: 'Back'
+        not_authorized: 'You are not authorized to view this page.'
+      new:
+        header: 'Create New Question for Test: %{test_title}'
+        back_tests_button: 'Back'
+      edit:
+        header: 'Edit Question in Test: %{test_title}'
+        delete_question_button: 'Delete'
+        are_you_sure: 'Are you sure?'
+        back_to_test_qstn: 'Back'
+        show_question_button: 'Show'

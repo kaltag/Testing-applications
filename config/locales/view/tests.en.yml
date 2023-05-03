@@ -1,0 +1,11 @@
+en:
+  tests:
+    index:
+      header: 'Available tests'
+      title: 'Title'
+      level: 'Level'
+      category: 'Category'
+      questions: 'Questions'
+      actions: 'Actions'
+      start_button: 'Start'
+

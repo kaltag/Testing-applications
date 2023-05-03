@@ -1,0 +1,37 @@
+en:
+  admin:
+    tests:
+      create:
+        test_created: 'Test was successfully created!'
+      update:
+        test_updated: 'Test was successfully updated!'
+      destroy:
+        test_deleted: 'Test was successfully deleted!'
+      index:
+        header: 'Tricky Tests'
+        new_test_button: 'New Test'
+        title: 'Title'
+        level: 'Level'
+        category: 'Сategory'
+        questions: 'Questions'
+        actions: 'Actions'
+        not_authorized: 'You are not authorized to view this page.'
+        show_test_button: 'Show'
+        edit_test_button: 'Edit'
+        delete_test_button: 'Delete'
+        are_you_sure: 'Are you sure?'
+      show:
+        header: 'Test: %{title}'
+        level: 'Level'
+        edit_test_button: 'Edit Test'
+        delete_test_button: 'Delete'
+        are_you_sure: 'Are you sure?'
+        back_tests_button: 'Back'
+        not_authorized: 'You are not authorized to view this page.'
+      new:
+        header: 'Create New Test'
+        back_tests_button: 'Back'
+      edit:
+        header: 'Edit Test: %{title}'
+        show_test_button: 'Show Test'
+        back_tests_button: 'Back'
