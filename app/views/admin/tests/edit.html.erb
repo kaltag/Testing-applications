@@ -2,5 +2,7 @@
 
 <%= render 'form', test: @test %>
 
-<%= link_to t('.show_test_button'), admin_test_path %> |
-<%= link_to t('.back_tests_button'), admin_tests_path %>
+<div class="actions mt-3 mx-5">
+    <%= link_to t('.show_test_button'), admin_test_path, class: 'btn btn-primary' %>
+    <%= link_to t('.back_tests_button'), admin_tests_path, class: 'btn btn-secondary' %>
+</div>

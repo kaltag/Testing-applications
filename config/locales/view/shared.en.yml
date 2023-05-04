@@ -5,11 +5,16 @@ en:
         one: '%{count} error detected:'
         other: '%{count} errors detected:'
     header:
-      greeting: 'Hello, '
+      home: 'Home'
+      panel: 'Admin Panel'
+      about: 'About'
+      greeting: 'Hello,'
       log_out: 'Log out'
     footer:
       project_link: 'Educational project at Thinknetica online school'
     admin_header:
-      panel: 'TestGuru Admin Panel'
+      home: 'Users page'
+      panel: 'Admin Panel'
+      about: 'About'
       greeting: 'Hello, '
       log_out: 'Log out'

@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <p><%= t('.header', title: @question.test.title) %></p>
 <p> <%= t('.question_label') %> <%= @question.body %></p>
 <%= link_to t('.back_to_qstn_test_button'), admin_test_path(id: @question.test_id) %> |
