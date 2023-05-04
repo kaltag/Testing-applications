@@ -1,9 +1,9 @@
 <nav class="nav admin-nav">
-  <%= link_to 'TestGuru', root_path %>
+  <h1><%= link_to t('.panel'), admin_tests_path %></h1>
   <% if user_signed_in? %>
     <div class='user'>
-      Welcome, <b><%= current_user.email %></b>, Guru
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+      <%= t('.greeting') %> <b><%= current_user.first_name || current_user.email %></b>
+      <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
     </div>
   <% end %>
 </nav>

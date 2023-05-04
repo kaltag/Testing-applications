@@ -1,0 +1,17 @@
+ru:
+  shared:
+    errors:
+      header:
+        few: 'Обнаружено %{count} ошибки:'
+        many: 'Обнаружено %{count} ошибок:'
+        one: 'Обнаружена %{count} ошибка:'
+        other: 'Обнаружено %{count} ошибки:'
+    header:
+      greeting: 'Привет, '
+      log_out: 'Выход'
+    footer:
+      project_link: 'Учебный проект в онлайн школе Thinknetica'
+    admin_header:
+      panel: 'Панель администратора TestGuru'
+      greeting: 'Привет, '
+      log_out: 'Выход'

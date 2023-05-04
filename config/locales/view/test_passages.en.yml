@@ -1,0 +1,14 @@
+en:
+  test_passages:
+    show:
+      header: 'Passing the Test: %{test_title}'
+      number: 'The Question %{current} of %{total}.'
+      next_button: 'Next'
+    result:
+      header: 'You have been completed the Test: '
+      test_result: 'Your Test passage result is:'
+      tests_button: 'Main page with Tests'
+      success: 'You have been completed the Test successfully!'
+      failure: 'You have been failed the Test!'
+      correct: 'Correct questions:'
+      all_questions: 'Total questions:'

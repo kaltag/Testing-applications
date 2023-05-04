@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tests</h1>
+<h1><%= t('.header') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Level</th>
-      <th>Category</th>
-       <th>Questions</th>
-      <th colspan='4'> Actions </th>
+      <th><%= t('.title') %></th>
+      <th><%= t('.level') %></th>
+      <th><%= t('.category') %></th>
+      <th><%= t('.questions') %></th>
+      <th colspan='4'> <%= t('.actions') %> </th>
     </tr>
   </thead>
 
@@ -21,9 +21,9 @@
         <td><%= test.level %></td>
         <td><%= test.category.title %></td>
         <td><%= test.questions.count %></td>
-        <td><%= link_to 'Show', admin_test_path(test) %></td>
-        <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
-        <td><%= link_to 'Destroy', admin_test_path(test), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('.show_test_button'), admin_test_path(test) %></td>
+        <td><%= link_to t('.edit_test_button'), edit_admin_test_path(test) %></td>
+        <td><%= link_to t('.delete_test_button'), admin_test_path(test), method: :delete, data: { confirm: t('.are_you_sure') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Test', new_admin_test_path %>
+<%= link_to t('.new_test_button'), new_admin_test_path %>

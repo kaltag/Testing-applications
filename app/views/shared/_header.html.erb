@@ -1,13 +1,8 @@
 <header>
   <% if user_signed_in? %>
-    <% if current_user.type == 'Admin' %>
-      <h1><%= link_to 'TestGuru', admin_tests_path %></h1>
-    <% else %>
-      <h1><%= link_to 'TestGuru', root_path %></h1>
-    <% end %>
-
-    <p class="nav user">Welcome, <b><%= current_user.email %></b> Guru |
-        <%= link_to 'Log Out', destroy_user_session_path, method: :delete %></p>
+    <h1><%= link_to 'TestGuru', root_path %></h1>
+    <p class="nav user"> <%= t('.greeting') %> <b><%= current_user.email %></b> Guru |
+        <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %></p>
     <% else %>
     <p class="nav user">
       <%= link_to 'Log In', new_user_session_path %> or

@@ -1,0 +1,33 @@
+ru:
+  helpers:
+    submit:
+      test:
+        create: 'Создать Тест'
+        update: 'Обновить Тест'
+      question:
+        crete: 'Создать Вопрос'
+        update: 'Обновить Вопрос'
+      answer:
+        crete: 'Создать Ответ'
+        update: 'Обновить Ответ'
+    label:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category_id: 'Категория:'
+      question:
+        body: 'Текст Вопроса'
+      answer:
+        body: 'Текст Ответа'
+        correct: 'Верно?'
+    select:
+      prompt: 'Выберите категорию'
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы только что прошли тест на портале TestGuru!'
+
+  users:
+    sessions:
+      create:
+        hello: 'Привет, %{greeting}!'

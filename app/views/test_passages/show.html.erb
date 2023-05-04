@@ -1,8 +1,6 @@
-<%= @test_passage.test.title %>
-<b>
-  <%= @test_passage.current_question.body %>
-  <p><%= @test_passage.current_question_number %>/<%= @test_passage.test.questions.count %></p>
-</b>
+<p><%= t('.header', test_title: @test_passage.test.title) %> </p>
+<p><%= t('.number', current: @test_passage.current_question_number, total: @test_passage.test.questions.count) %></p>
+<b><%= @test_passage.current_question.body %></b>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -12,5 +10,5 @@
     </p>
   <% end %>
 
-  <%= form.submit 'Next' %>
+  <%= form.submit t('.next_button') %>
 <% end %>

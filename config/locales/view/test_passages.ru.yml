@@ -1,0 +1,14 @@
+ru:
+  test_passages:
+    show:
+      header: 'Прохождение Теста: %{test_title}'
+      number: 'Вопрос %{current} из %{total}.'
+      next_button: 'Следующий'
+    result:
+      header: 'Вы прошли Тест: '
+      test_result: 'Ваш результат прохождения теста:'
+      tests_button: 'Главная страница с тестами'
+      success: 'Вы прошли Тест успешно!'
+      failure: 'Вы провалили Тест!'
+      correct: 'Правильных вопросов:'
+      all_questions: 'Всего вопросов:'

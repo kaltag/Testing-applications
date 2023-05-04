@@ -1,0 +1,37 @@
+ru:
+  admin:
+    tests:
+      create:
+        test_created: 'Тест был успешно создан!'
+      update:
+        test_updated: 'Тест был успешно обновлен!'
+      destroy:
+        test_deleted: 'Тест был успешно удален!'
+      index:
+        header: 'Доступные Тесты'
+        new_test_button: 'Новый Тест'
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        questions: 'Вопросы'
+        actions: 'Действия'
+        not_authorized: 'Вы не авторизированы для просмотра этой страницы.'
+        show_test_button: 'Показать'
+        edit_test_button: 'Изменить'
+        delete_test_button: 'Удалить'
+        are_you_sure: 'Вы уверены?'
+      show:
+        header: 'Тест: %{title}'
+        level: 'Уровень'
+        edit_test_button: 'Изменить Тест'
+        delete_test_button: 'Удалить'
+        are_you_sure: 'Вы уверены?'
+        back_tests_button: 'Назад'
+        not_authorized: 'Вы не авторизированы для просмотра этой страницы.'
+      new:
+        header: 'Создать Новый Тест'
+        back_tests_button: 'Назад'
+      edit:
+        header: 'Редактировать Тест: %{title}'
+        show_test_button: 'Показать тест'
+        back_tests_button: 'Назад'
