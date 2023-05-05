@@ -23,5 +23,7 @@ Rails.application.routes.draw do
         end
       end
     end
+
+    get :about, to: 'public#about'
   end
 end

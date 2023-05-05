@@ -1,9 +1,16 @@
-<nav class="nav admin-nav">
-  <h1><%= link_to t('.panel'), admin_tests_path %></h1>
-  <% if user_signed_in? %>
-    <div class='user'>
-      <%= t('.greeting') %> <b><%= current_user.first_name || current_user.email %></b>
-      <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <%= link_to image_tag('logo.svg', width: 40, height: 40, class: 'text-start', alt: 'TestGuru'), root_path %>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <%= link_to t('.home'), root_path, class: 'nav-link px-2 text-white' %>
+          <%= link_to t('.panel'), admin_tests_path, class: 'nav-link px-2 text-white' %>
+          <%= link_to t('.about'), '/about/author.html', class: 'nav-link px-2 text-white' %>
+        </ul>
+         <%= t('.greeting') %> <b><%= current_user.first_name || current_user.email %></b>
+          <div class="text-end px-3">
+            <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'btn btn-outline-light me-2' %>
+        </div>
     </div>
-  <% end %>
-</nav>
+  </div>
+</header>

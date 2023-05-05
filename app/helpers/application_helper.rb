@@ -1,4 +1,6 @@
 module ApplicationHelper
+  AVAILABLE_FLASH = { notice: 'success', alert: 'danger' }.freeze
+
   def current_year
     Time.zone.now.year
   end

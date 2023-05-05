@@ -7,11 +7,16 @@ ru:
         one: 'Обнаружена %{count} ошибка:'
         other: 'Обнаружено %{count} ошибки:'
     header:
-      greeting: 'Привет, '
+      home: 'Домашная страница'
+      panel: 'Панель администратора'
+      about: 'Об авторе'
+      greeting: 'Привет,'
       log_out: 'Выход'
     footer:
       project_link: 'Учебный проект в онлайн школе Thinknetica'
     admin_header:
-      panel: 'Панель администратора TestGuru'
+      home: 'Страница пользователя'
+      panel: 'Панель администратора'
+      about: 'Об авторе'
       greeting: 'Привет, '
       log_out: 'Выход'
