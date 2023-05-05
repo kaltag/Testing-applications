@@ -13,5 +13,5 @@ ru:
       correct: 'Правильных вопросов:'
       all_questions: 'Всего вопросов:'
     gist:
-      success: 'Gist успешно сохранен!'
+      success: 'Gist успешно сохранен по ссылке %{gist_url}'
       failure: 'Во время сохранения gist произошла ошибка'

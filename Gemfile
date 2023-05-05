@@ -40,6 +40,9 @@ gem 'faraday'
 gem 'bootstrap', '~> 5.3.0.alpha3'
 gem 'jquery-rails'
 
+# GITHUB
+gem 'octokit', '~> 5.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
