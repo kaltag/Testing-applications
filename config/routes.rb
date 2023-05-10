@@ -23,8 +23,8 @@ Rails.application.routes.draw do
           resources :answers, shallow: true, except: :index
         end
       end
+      get :gists, to: 'gists#index'
     end
 
-    get :about, to: 'public#about'
   end
 end

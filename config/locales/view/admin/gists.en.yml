@@ -1,0 +1,7 @@
+en:
+  admin:
+    gists:
+      index:
+        user: 'User'
+        question: 'Question'
+        gist_url: 'Gist url'

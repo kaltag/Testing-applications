@@ -1,0 +1,7 @@
+ru:
+  admin:
+    gists:
+      index:
+        user: 'Пользователь'
+        question: 'Вопрос'
+        gist_url: 'Ссылка на gist'

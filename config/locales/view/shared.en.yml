@@ -16,5 +16,6 @@ en:
       home: 'Users page'
       panel: 'Admin Panel'
       about: 'About'
+      gists: 'Users gist'
       greeting: 'Hello, '
       log_out: 'Log out'
