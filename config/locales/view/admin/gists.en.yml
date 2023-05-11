@@ -5,3 +5,6 @@ en:
         user: 'User'
         question: 'Question'
         gist_url: 'Gist url'
+      create:
+        success: 'Gist was successfully created by link %{gist_url}'
+        failure: 'An error occurred while saving gist'

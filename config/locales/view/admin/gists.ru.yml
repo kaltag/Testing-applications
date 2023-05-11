@@ -5,3 +5,6 @@ ru:
         user: 'Пользователь'
         question: 'Вопрос'
         gist_url: 'Ссылка на gist'
+      create:
+        success: 'Gist успешно сохранен по ссылке %{gist_url}'
+        failure: 'Во время сохранения gist произошла ошибка'

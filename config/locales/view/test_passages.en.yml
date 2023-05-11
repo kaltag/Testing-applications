@@ -12,6 +12,3 @@ en:
       failure: 'You have been failed the Test!'
       correct: 'Correct questions:'
       all_questions: 'Total questions:'
-    gist:
-      success: 'Gist was successfully created by link %{gist_url}'
-      failure: 'An error occurred while saving gist'
