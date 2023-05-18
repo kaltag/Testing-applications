@@ -1,16 +1,26 @@
 Answer.destroy_all
-Question.destroy_all
 TestPassage.destroy_all
+Gist.destroy_all
+Question.destroy_all
 Test.destroy_all
 Category.destroy_all
+Admin.destroy_all
 User.destroy_all
 
 c1 = Category.create(title: 'Ruby')
 c2 = Category.create(title: 'Rails')
 c3 = Category.create(title: 'SQL')
 
-user1 = User.create(email: 'user@test.com', password_digest: 123)
-user2 = User.create(email: 'user2@test.com', password_digest: 123)
+user1 = User.create(email: 'user@test.com', password: '123456', confirmed_at: DateTime.now)
+user2 = User.create(email: 'user2@test.com', password: '123456', confirmed_at: DateTime.now)
+
+admin = Admin.create!(
+  email: 'admin@test.com',
+  password: 123_456,
+  first_name: 'Admin',
+  last_name: 'Admin',
+  confirmed_at: DateTime.now
+)
 
 t1 = Test.create(title: 'Lesson 1', level: rand(1..10), category_id: c1.id, user_id: user1.id)
 t2 = Test.create(title: 'Lesson 2', level: rand(1..10), category_id: c1.id, user_id: user1.id)

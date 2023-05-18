@@ -1,0 +1,5 @@
+ru:
+  gists:
+    create:
+      success: 'Gist успешно сохранен по ссылке %{gist_url}'
+      failure: 'Во время сохранения gist произошла ошибка'
