@@ -19,6 +19,10 @@ class TestPassage < ApplicationRecord
     (correct_question.to_f / test.questions.count) * 100
   end
 
+  def progress
+    (current_question_number.to_f / test.questions.count) * 100
+  end
+
   def accept!(answer_ids)
     self.correct_question += 1 if correct_answer?(answer_ids)
     save!
