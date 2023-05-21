@@ -4,11 +4,12 @@ document.addEventListener('turbolinks:load', function () {
 
   const passwordCheck = () => {
     if (passwordConfirmation.value === '') {
-      passwordConfirmation.style.backgroundColor = "white";
-    } else if (passwordConfirmation.value === password.value) {
-      passwordConfirmation.style.backgroundColor = "green";
+      return passwordConfirmation.style.backgroundColor = "white"
+    }
+    if (passwordConfirmation.value === password.value) {
+      passwordConfirmation.style.backgroundColor = "green"
     } else {
-      passwordConfirmation.style.backgroundColor = "red";
+      passwordConfirmation.style.backgroundColor = "red"
     }
   }
   passwordConfirmation.addEventListener('input', () => passwordCheck())
