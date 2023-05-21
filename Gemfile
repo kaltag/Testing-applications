@@ -39,6 +39,7 @@ gem 'faraday'
 # UI
 gem 'bootstrap', '~> 5.3.0.alpha3'
 gem 'jquery-rails'
+gem 'octicons_helper'
 
 # GITHUB
 gem 'octokit', '~> 5.0'
