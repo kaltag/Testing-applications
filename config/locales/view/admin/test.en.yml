@@ -18,6 +18,7 @@ en:
         not_authorized: 'You are not authorized to view this page.'
         show_test_button: 'Show'
         edit_test_button: 'Edit'
+        cancel_test_button: 'Cancel'
         delete_test_button: 'Delete'
         are_you_sure: 'Are you sure?'
       show:
@@ -35,3 +36,5 @@ en:
         header: 'Edit Test: %{title}'
         show_test_button: 'Show Test'
         back_tests_button: 'Back'
+      form_inline:
+        submit: "OK"

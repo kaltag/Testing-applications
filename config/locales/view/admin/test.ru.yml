@@ -18,6 +18,7 @@ ru:
         not_authorized: 'Вы не авторизированы для просмотра этой страницы.'
         show_test_button: 'Показать'
         edit_test_button: 'Изменить'
+        cancel_test_button: 'Отмена'
         delete_test_button: 'Удалить'
         are_you_sure: 'Вы уверены?'
       show:
@@ -35,3 +36,5 @@ ru:
         header: 'Редактировать Тест: %{title}'
         show_test_button: 'Показать тест'
         back_tests_button: 'Назад'
+      form_inline:
+        submit: "OK"

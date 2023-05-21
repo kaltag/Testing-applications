@@ -7,9 +7,10 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "jquery"
 import 'utilities/sorting'
 import 'utilities/check_password'
-
+import 'utilities/form_inline'
 
 Rails.start()
 Turbolinks.start()

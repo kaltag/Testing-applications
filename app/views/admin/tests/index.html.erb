@@ -1,9 +1,11 @@
 <h1 class="mx-5"><%= t('.header') %></h1>
 
+<%= render 'shared/errors', resource: @test %>
+
 <table class="table p-5">
   <thead>
     <tr>
-      <th class="sort-by-title pointer">
+      <th class="sort-by-title pointer ">
         <%= t('.title') %>
         <%= octicon 'arrow-up', class: 'text-success hide' %>
         <%= octicon 'arrow-down', class: 'text-success hide' %>
@@ -17,13 +19,21 @@
   <tbody>
     <% @tests.each do |test| %>
       <tr>
-        <td><%= test.title %></td>
-        <td><%= test.level %></td>
-        <td><%= test.category.title %></td>
-        <td><%= test.questions.count %></td>
-        <td><%= link_to t('.show_test_button'), admin_test_path(test) %></td>
-        <td><%= link_to t('.edit_test_button'), edit_admin_test_path(test) %></td>
-        <td><%= link_to t('.delete_test_button'), admin_test_path(test), method: :delete, data: { confirm: t('.are_you_sure') } %></td>
+        <td class='align-middle'>
+          <%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id } %>
+          <%= render 'form_inline', test: test == @test ? @test : test %>
+        </td>
+        <td class='align-middle'><%= test.level %></td>
+        <td class='align-middle'><%= test.category.title %></td>
+        <td class='align-middle'><%= test.questions.count %></td>
+        <td class='align-middle'><%= link_to t('.show_test_button'), admin_test_path(test) %></td>
+        <td class='align-middle'>
+          <%= link_to t('.edit_test_button'),
+                      edit_admin_test_path(test),
+                      data: { test_id: test.id },
+                      class: 'form-inline-link' %>
+        </td>
+        <td class='align-middle'><%= link_to t('.delete_test_button'), admin_test_path(test), method: :delete, data: { confirm: t('.are_you_sure') } %></td>
       </tr>
     <% end %>
   </tbody>
