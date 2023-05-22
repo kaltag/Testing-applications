@@ -12,5 +12,7 @@ document.addEventListener('turbolinks:load', function () {
       passwordConfirmation.style.backgroundColor = "red"
     }
   }
-  passwordConfirmation.addEventListener('input', () => passwordCheck())
+  if (passwordConfirmation) {
+    passwordConfirmation.addEventListener('input', () => passwordCheck())
+  }
 })
