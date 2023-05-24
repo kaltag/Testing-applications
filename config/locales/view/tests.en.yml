@@ -8,3 +8,5 @@ en:
       questions: 'Questions'
       actions: 'Actions'
       start_button: 'Start'
+      no_questions: 'Test not available'
+

@@ -25,6 +25,8 @@
         <td><%= test.questions.count %></td>
         <% if test.questions.present? %>
           <td><%= button_to t('.start_button'), start_test_path(test) %> </td>
+        <% else %>
+          <td><%= t('.no_questions') %></td>
         <% end %>
       </tr>
     <% end %>
