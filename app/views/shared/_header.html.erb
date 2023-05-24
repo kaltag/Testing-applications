@@ -2,6 +2,7 @@
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <%= link_to image_tag('logo.svg', width: 40, height: 40, class: 'text-start', alt: 'TestGuru'), root_path %>
+      <%= link_to t('.feedbacks'), new_feedback_path, class: 'nav-link mx-5 text-white' %>
       <% if user_signed_in? %>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <%= link_to t('.home'), root_path, class: 'nav-link px-2 text-white' %>

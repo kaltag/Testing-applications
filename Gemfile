@@ -37,6 +37,7 @@ gem 'devise'
 
 # NETWORKING
 gem 'faraday'
+gem 'faraday-retry'
 
 # UI
 gem 'bootstrap', '~> 5.3.0.alpha3'
