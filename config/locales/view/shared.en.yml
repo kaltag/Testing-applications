@@ -10,6 +10,7 @@ en:
       about: 'About'
       greeting: 'Hello,'
       log_out: 'Log out'
+      feedbacks: 'Feedback'
     footer:
       project_link: 'Educational project at Thinknetica online school'
     admin_header:
