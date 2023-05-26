@@ -2,7 +2,13 @@ class TestsController < ApplicationController
   before_action :set_test, only: %i[start]
 
   def index
-    @tests = Test.all
+    # 1 вариант
+
+    # questions_with_answ = Question.joins(:answers).distinct
+    # @correct_tests = questions_with_answ.map{&:test}.uniq.sort
+
+    # 2 вариант
+    @correct_tests = Question.joins(:answers).distinct.map(&:test).uniq.sort
   end
 
   def start

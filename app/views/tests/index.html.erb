@@ -17,17 +17,13 @@
 
   <tbody>
 
-    <% @tests.each do |test| %>
+    <% @correct_tests.each do |test| %>
       <tr>
         <td><%= test.title %></td>
         <td><%= test.level %></td>
         <td><%= test.category.title %></td>
         <td><%= test.questions.count %></td>
-        <% if test.questions.present? %>
-          <td><%= button_to t('.start_button'), start_test_path(test) %> </td>
-        <% else %>
-          <td><%= t('.no_questions') %></td>
-        <% end %>
+        <td><%= button_to t('.start_button'), start_test_path(test) %> </td>
       </tr>
     <% end %>
   </tbody>
