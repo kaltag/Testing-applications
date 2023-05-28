@@ -9,6 +9,8 @@ class Test < ApplicationRecord
   scope :medium_tests, -> { where(level: 2..4) }
   scope :hard_tests, -> { where(level: 5..Float::INFINITY) }
 
+  scope :published, -> { where(published: true) }
+
   scope :get_tests_category, ->(category_name) { Test.joins(:category).where(categories: { title: category_name }) }
 
   validates :title, presence: true

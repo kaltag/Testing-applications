@@ -15,7 +15,7 @@ en:
         title: 'Title'
         level: 'Level'
         category_id: 'Category:'
-        author_id: 'Author:'
+        created: 'Test ready?'
       question:
         body: 'Question text'
       answer:

@@ -121,6 +121,8 @@ GEM
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
+    faraday-retry (2.1.0)
+      faraday (~> 2.0)
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -179,6 +181,7 @@ GEM
     parallel (1.22.1)
     parser (3.2.0.0)
       ast (~> 2.4.1)
+    pg (1.5.3)
     popper_js (2.11.7)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -272,7 +275,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.2-x86_64-linux)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -320,12 +322,14 @@ DEPENDENCIES
   erb_lint
   faker
   faraday
+  faraday-retry
   jbuilder (~> 2.7)
   jquery-rails
   letter_opener
   listen (~> 3.3)
   octicons_helper
   octokit (~> 5.0)
+  pg (~> 1.5, >= 1.5.3)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7)
@@ -334,7 +338,6 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

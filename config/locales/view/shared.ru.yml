@@ -12,6 +12,7 @@ ru:
       about: 'Об авторе'
       greeting: 'Привет,'
       log_out: 'Выход'
+      feedbacks: 'Обратная связь'
     footer:
       project_link: 'Учебный проект в онлайн школе Thinknetica'
     admin_header:

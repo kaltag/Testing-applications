@@ -15,6 +15,7 @@ ru:
         title: 'Название'
         level: 'Уровень'
         category_id: 'Категория:'
+        created: 'Тест готов?'
       question:
         body: 'Текст Вопроса'
       answer:
