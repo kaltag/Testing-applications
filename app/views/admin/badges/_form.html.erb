@@ -1,0 +1,12 @@
+<%= form_with(model: [:admin,badge]) do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+
+  <div class="form-group mx-5">
+    <%= form.label :name, class: '' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="actions mt-3 mx-5">
+    <%= form.submit %>
+  </div>
+<% end %>

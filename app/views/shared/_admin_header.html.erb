@@ -6,6 +6,7 @@
           <%= link_to t('.home'), root_path, class: 'nav-link px-2 text-white' %>
           <%= link_to t('.panel'), admin_tests_path, class: 'nav-link px-2 text-white' %>
           <%= link_to t('.gists'), admin_gists_path, class: 'nav-link px-2 text-white' %>
+          <%= link_to t('.badges'), admin_badges_path, class: 'nav-link px-2 text-white' %>
           <%= link_to t('.about'), '/about/author.html', class: 'nav-link px-2 text-white' %>
         </ul>
          <%= t('.greeting') %> <b><%= current_user.first_name || current_user.email %></b>
