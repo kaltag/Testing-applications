@@ -22,8 +22,8 @@ admin = Admin.create!(
   confirmed_at: DateTime.now
 )
 
-t1 = Test.create(title: 'Lesson 1', level: rand(1..10), category_id: c1.id, user_id: user1.id, created: true)
-t2 = Test.create(title: 'Lesson 2', level: rand(1..10), category_id: c1.id, user_id: user1.id, created: true)
+t1 = Test.create(title: 'Lesson 1', level: rand(1..10), category_id: c1.id, user_id: user1.id, published: true)
+t2 = Test.create(title: 'Lesson 2', level: rand(1..10), category_id: c1.id, user_id: user1.id, published: true)
 t3 = Test.create(title: 'Lesson 3', level: rand(1..10), category_id: c2.id, user_id: user1.id)
 Test.create(title: 'Lesson 4', level: rand(1..10), category_id: c2.id, user_id: user2.id)
 Test.create(title: 'Lesson 5', level: rand(1..10), category_id: c3.id, user_id: user2.id)
