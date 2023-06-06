@@ -17,6 +17,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def create
     @badge = Badge.new(badge_params)
+    @badge.image = 'badge.png'
     if @badge.save
       redirect_to admin_badge_path(@badge), notice: t('.badge_created')
     else
