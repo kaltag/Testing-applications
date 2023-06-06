@@ -18,7 +18,7 @@
       <tr>
         <td class='align-middle'>
           <%= content_tag :span, badge.name %>
-          <%= image_tag badge.image, class: "rounded px-2", style:'width: 5%' %>
+          <%= image_tag badge.image, class: 'rounded px-2', style: 'width: 5%' %>
         </td>
         <td><%= link_to t('.show_badge_button'), admin_badge_path(badge) %></td>
         <td><%= link_to t('.edit_badge_button'), edit_admin_badge_path(badge) %></td>
