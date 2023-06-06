@@ -4,7 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question, on: %i[create update]
-  before_save :before_save_check_success, unless: :new_record?
+  before_update :before_save_check_success
 
   SUCCESPOINT = 85
 
