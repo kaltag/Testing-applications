@@ -12,7 +12,7 @@ class BadgeService
   end
 
   def create_badge(badge)
-    UserReward.create(user: @user, badge:)
+    @user.badges << badge
   end
 
   private
@@ -23,19 +23,19 @@ class BadgeService
 
   def easy_tests
     user_easy_tests_ids = user_tests_by_easy_level.pluck(:test_id).uniq.sort
-    all_easy_tests_id = Test.easy_tests.where(published: true).pluck(:id).sort
+    all_easy_tests_id = Test.easy_tests.published.pluck(:id).sort
     user_easy_tests_ids.present? && user_easy_tests_ids == all_easy_tests_id
   end
 
   def medium_tests
     user_medium_tests_ids = user_tests_by_medium_level.pluck(:test_id).uniq.sort
-    all_medium_tests_id = Test.medium_tests.where(published: true).pluck(:id).sort
+    all_medium_tests_id = Test.medium_tests.published.pluck(:id).sort
     user_medium_tests_ids.present? && user_medium_tests_ids == all_medium_tests_id
   end
 
   def hard_tests
     user_hard_tests_ids = user_tests_by_hard_level.pluck(:test_id).uniq.sort
-    all_hard_tests_id = Test.hard_tests.where(published: true).pluck(:id).sort
+    all_hard_tests_id = Test.hard_tests.published.pluck(:id).sort
     user_hard_tests_ids.present? && user_hard_tests_ids == all_hard_tests_id
   end
 
@@ -46,19 +46,19 @@ class BadgeService
   end
 
   def user_tests_by_easy_level
-    TestPassage.includes(:user, :test).where(user: @user).where(success: true).where(tests: { level: 0..1 })
+    TestPassage.includes(:test).where(user: @user).where(success: true).where(tests: { level: 0..1 })
   end
 
   def user_tests_by_medium_level
-    TestPassage.includes(:user, :test).where(user: @user).where(success: true).where(tests: { level: 2..4 })
+    TestPassage.includes(:test).where(user: @user).where(success: true).where(tests: { level: 2..4 })
   end
 
   def user_tests_by_hard_level
-    TestPassage.includes(:user, :test).where(user: @user).where(success: true).where(tests: { level: 5..Float::INFINITY })
+    TestPassage.includes(:test).where(user: @user).where(success: true).where(tests: { level: 5..Float::INFINITY })
   end
 
   def user_tests_by_category
-    TestPassage.includes(:user, test: [:category])
+    TestPassage.includes(test: [:category])
                .where(user: @user)
                .where(success: true)
                .where(tests: { categories: { id: @test.category.id } })
