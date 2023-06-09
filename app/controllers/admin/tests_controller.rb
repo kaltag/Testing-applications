@@ -48,7 +48,7 @@ class Admin::TestsController < Admin::BaseController
   private
 
   def set_tests
-    @tests = Test.all
+    @tests = Test.all.includes(:category)
   end
 
   def set_test

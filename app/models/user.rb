@@ -9,9 +9,13 @@ class User < ApplicationRecord
          :validatable
 
   has_many :test_passages, dependent: :destroy
-  has_many :tests, through: :test_passages, dependent: :destroy
+  has_many :tests, through: :test_passages
+
   has_many :gists, dependent: :destroy
-  has_many :questions, through: :gists, dependent: :destroy
+  has_many :questions, through: :gists
+
+  has_many :user_rewards, dependent: :destroy
+  has_many :badges, through: :user_rewards
 
   has_many :created_tests, class_name: 'Test', dependent: :destroy
 

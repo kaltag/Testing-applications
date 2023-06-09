@@ -8,6 +8,7 @@
           <% if current_user.admin? %>
             <%= link_to t('.panel'), admin_tests_path, class: 'nav-link px-2 text-white' %>
           <% end %>
+          <%= link_to t('.user_rewards'), user_rewards_path, class: 'nav-link px-2 text-white' %>
           <%= link_to t('.feedbacks'), new_feedback_path, class: 'nav-link px-2 text-white' %>
           <%= link_to t('.about'), '/about/author.html', class: 'nav-link px-2 text-white' %>
         </ul>

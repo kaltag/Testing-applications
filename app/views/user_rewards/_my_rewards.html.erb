@@ -1,0 +1,25 @@
+<h1 class="mx-5"><%= t('.header') %></h1>
+
+<table class="table p-5">
+  <thead>
+    <tr>
+      <th class="sort-by-title pointer">
+        <%= t('.title') %>
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+      </th>
+      <th><%= t('.date_created') %></th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @my_rewards.each do |reward| %>
+      <tr>
+        <td><%= reward.badge.name %></td>
+        <td><%= reward.created_at.strftime('%Y-%m-%d %H:%M') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

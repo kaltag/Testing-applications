@@ -1,0 +1,41 @@
+en:
+  admin:
+    badges:
+      create:
+        badge_created: 'Награда была успешно создана!'
+      update:
+        badge_updated: 'Награда была успешно обновлена!'
+      destroy:
+        badge_deleted: 'Награда была успешно удалена!'
+      index:
+        header: 'Доступные награды'
+        name: 'Название'
+        actions: 'Действия'
+        show_badge_button: 'Показать'
+        edit_badge_button: 'Изменить'
+        delete_badge_button: 'Удалить'
+        are_you_sure: 'Вы уверены?'
+        new_budge_button: 'Создать новую награду'
+        not_authorized: 'Вы не авторизированы для просмотра этой страницы.'
+      show:
+        header: 'Награда: %{name}'
+        back_badges_button: 'Назад'
+        edit_badge_button: 'Изменить'
+        delete_badge_button: 'Удалить'
+        are_you_sure: 'Вы уверены?'
+        not_authorized: 'Вы не авторизированы для просмотра этой страницы.'
+      new:
+        header: 'Создать новую награду'
+        back_badges_button: 'Назад'
+      edit:
+        header: 'Редактировать Награду: %{name}'
+        show_badge_button: 'Показать Награду'
+        back_badges_button: 'Назад'
+  helpers:
+    submit:
+      badge:
+        create: 'Создать Награду'
+        update: 'Обновить Награду'
+    label:
+      badge:
+        name: 'Название'

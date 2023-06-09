@@ -1,0 +1,9 @@
+en:
+  user_rewards:
+    my_rewards:
+      header: 'My badges'
+      title: 'Name'
+      date_created: 'Receiving time'
+    no_received_rewards:
+      header: 'Badges not received'
+      title: 'Name'

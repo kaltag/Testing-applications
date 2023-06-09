@@ -4,6 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question, on: %i[create update]
+  before_update :before_save_check_success
 
   SUCCESPOINT = 85
 
@@ -11,7 +12,7 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
-  def succes?
+  def success?
     percent >= SUCCESPOINT
   end
 
@@ -40,6 +41,10 @@ class TestPassage < ApplicationRecord
                             else
                               test.questions.first
                             end
+  end
+
+  def before_save_check_success
+    self.success = true if success?
   end
 
   def next_question

@@ -1,0 +1,31 @@
+<h1 class="mx-5"><%= t('.header') %></h1>
+
+<%= render 'shared/errors', resource: @badge %>
+
+<table class="table p-5">
+  <thead>
+    <tr>
+      <th class="sort-by-title pointer ">
+        <%= t('.name') %>
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+      </th>
+      <th colspan='3'> <%= t('.actions') %> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @badges.each do |badge| %>
+      <tr>
+        <td class='align-middle'>
+          <%= content_tag :span, badge.name %>
+          <%#= avatar_for(badge) %>
+        </td>
+        <td><%= link_to t('.show_badge_button'), admin_badge_path(badge) %></td>
+        <td><%= link_to t('.edit_badge_button'), edit_admin_badge_path(badge) %></td>
+        <td><%= link_to t('.delete_badge_button'), admin_badge_path(badge), method: :delete, data: { confirm: t('.are_you_sure') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new_budge_button'), new_admin_badge_path, class: 'mx-5 btn btn-success' %>

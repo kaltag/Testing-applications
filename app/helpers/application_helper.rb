@@ -14,4 +14,10 @@ module ApplicationHelper
       content_tag :p, msg, class: "flash #{type}"
     end
   end
+
+  def avatar_for(badge)
+    @badge_image = image_tag('badge.png') unless badge.image.present?
+
+    @badge_image
+  end
 end

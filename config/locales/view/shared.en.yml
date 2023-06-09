@@ -18,5 +18,6 @@ en:
       panel: 'Admin Panel'
       about: 'About'
       gists: 'Users gist'
+      badges: 'Badges'
       greeting: 'Hello, '
       log_out: 'Log out'

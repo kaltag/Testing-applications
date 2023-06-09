@@ -1,5 +1,5 @@
 <h1><%= t('.header') %><u><%= @test_passage.test.title %></u></h1>
-<% if @test_passage.succes? %>
+<% if @test_passage.success? %>
   <p style="color:green;"> <%= t('.test_result') %> <%= @test_passage.percent.round %>%</p>
   <p style="color:green;"> <%= t('.success') %></p>
 <% else %>

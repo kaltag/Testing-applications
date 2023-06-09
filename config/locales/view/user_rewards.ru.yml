@@ -1,0 +1,9 @@
+ru:
+  user_rewards:
+    my_rewards:
+      header: 'Мои награды'
+      title: 'Название'
+      date_created: 'Время получения'
+    no_received_rewards:
+      header: 'Не полученные награды'
+      title: 'Название'

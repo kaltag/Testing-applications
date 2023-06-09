@@ -2,7 +2,7 @@ class TestsController < ApplicationController
   before_action :set_test, only: %i[start]
 
   def index
-    @correct_tests = Test.published
+    @correct_tests = Test.published.includes(:category)
   end
 
   def start
