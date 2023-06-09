@@ -4,6 +4,8 @@ ru:
       header: 'Прохождение Теста: %{test_title}'
       number: 'Вопрос %{current} из %{total}.'
       next_button: 'Следующий'
+      remaining_time: "Оставшееся время"
+      minutes: "минут"
     result:
       header: 'Вы прошли Тест: '
       test_result: 'Ваш результат прохождения теста:'

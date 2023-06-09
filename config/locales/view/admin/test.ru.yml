@@ -15,6 +15,7 @@ ru:
         category: 'Категория'
         questions: 'Вопросы'
         ready: 'Тест опубликован?'
+        timer: 'Таймер'
         published: 'Опубликован'
         nopublished: 'Не опубликован'
         actions: 'Действия'

@@ -4,6 +4,8 @@ en:
       header: 'Passing the Test: %{test_title}'
       number: 'The Question %{current} of %{total}.'
       next_button: 'Next'
+      remaining_time: "Remaining time"
+      minutes: "minutes"
     result:
       header: 'You have been completed the Test: '
       test_result: 'Your Test passage result is:'

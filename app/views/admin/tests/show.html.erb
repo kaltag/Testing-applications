@@ -5,6 +5,14 @@
   <%= @test.level %>
 </p>
 
+<p class="card-text mt-2">
+  <strong><%= t('.category') %>:</strong> <%= @test.category.title %>
+</p>
+
+<p class="card-subtitle text-muted mb-4">
+  <strong><%= t('.timer') %>:</strong> <%= @test.timer || '-' %>
+</p>
+
 <%= link_to t('.back_tests_button'), admin_tests_path %> |
 <%= link_to t('.edit_test_button'), edit_admin_test_path(@test) %> |
 <%= link_to t('.delete_test_button'), admin_test_path(@test), method: :delete, data: { confirm: t('.are_you_sure') } %>
