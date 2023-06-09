@@ -11,6 +11,7 @@
       <th><%= t('.level') %></th>
       <th><%= t('.category') %></th>
       <th><%= t('.questions') %></th>
+      <th><%= t('.timer') %></th>
       <th><%= t('.actions') %></th>
     </tr>
   </thead>
@@ -23,6 +24,7 @@
         <td><%= test.level %></td>
         <td><%= test.category.title %></td>
         <td><%= test.questions.count %></td>
+        <td><%= test.timer || '-' %></td>
         <td><%= button_to t('.start_button'), start_test_path(test) %> </td>
       </tr>
     <% end %>

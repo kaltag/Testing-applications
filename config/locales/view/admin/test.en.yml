@@ -15,6 +15,7 @@ en:
         category: 'Сategory'
         questions: 'Questions'
         ready: 'Test ready?'
+        timer: 'Timer'
         published: 'Ready'
         nopublished: 'Not ready'
         actions: 'Actions'
